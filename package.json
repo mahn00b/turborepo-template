@@ -1,14 +1,30 @@
 {
-  "name": "pixelgenie",
+  "name": "@workspace/project",
   "private": true,
   "scripts": {
+    "clean:node": "rm -rf node_modules pnpm-lock.yaml ./**/node_modules",
+    "clean:turbo": "rm -rf .turbo ./**/.turbo",
+    "clean:all": "pnpm run clean:node && pnpm run clean:turbo",
+    "create:package": "func() { turbo gen workspace --type=package --name=\"$1\"; }; func",
+    "create:package:copy": "func() { turbo gen workspace --type=package --name=\"$2\" --copy=\"$1\"; }; func",
+    "create:app": "func() { turbo gen workspace --type=app --name=\"$1\"; }; func",
+    "create:app:copy": "func() { turbo gen workspace --type=app --name=\"$2\" --copy=\"$1\";  }; func",
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "lint:commit": "commitlint --edit",
+    "lint:deps": "sherif",
+    "lint:deps:fix": "sherif --fix",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "prepare": "husky"
+
   },
   "devDependencies": {
+    "@commitlint/cli": "^18.4.3",
+    "@commitlint/config-conventional": "^18.4.3",
+    "husky": "^9.1.7",
     "prettier": "^3.2.5",
+    "sherif": "^0.10.0",
     "turbo": "^2.3.2",
     "typescript": "5.5.4"
   },
