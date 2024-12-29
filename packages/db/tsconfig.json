@@ -1,0 +1,9 @@
+{
+    "extends": "@pixelgenie/tsconfig/node-library.json",
+    "compilerOptions": {
+        "baseUrl": ".",
+        "rootDir": "."
+    },
+    "include": ["src"],
+    "exclude": ["node_modules", "dist"]
+}

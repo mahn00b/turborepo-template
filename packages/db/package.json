@@ -1,0 +1,27 @@
+{
+  "name": "@pixelgenie/db",
+  "version": "0.0.0",
+  "private": true,
+  "packageManager": "pnpm@9.0.0",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "lint": "prisma format --schema=./src/schema/schema.prisma",
+    "db:reset": "prisma db push --schema=./src/schema/schema.prisma --force-reset --skip-generate",
+    "gen": "pnpm dlx prisma generate --generator db --schema ./src/schema/schema.prisma",
+    "prepublishOnly": "pnpm run gen"
+  },
+  "devDependencies": {
+    "@pixelgenie/eslint-config": "workspace:*",
+    "@pixelgenie/tsconfig": "workspace:*",
+    "@types/node": "^22.10.1",
+    "dotenv": "^16.4.7",
+    "prisma": "^6.1.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.1.0"
+  }
+}

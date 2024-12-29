@@ -1,0 +1,8 @@
+# node
+node_modules/
+
+# ignore generated code
+src/capabl/
+
+# Note: This environment file is necessary for the library to output generated code to the correct location
+!.env

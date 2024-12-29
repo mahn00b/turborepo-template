@@ -1,0 +1,26 @@
+// ------------- CONFIG -----------------
+
+generator client {
+  provider = "prisma-client-js"
+  output   = env("CLIENT_OUTPUT")
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DB_URL")
+}
+
+// ------------- ./CONFIG ---------------
+
+// ------------- MODELS -----------------
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String?
+  password  String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// ------------- ./MODELS ---------------
