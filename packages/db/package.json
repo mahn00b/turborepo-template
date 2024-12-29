@@ -1,5 +1,5 @@
 {
-  "name": "@pixelgenie/db",
+  "name": "@project/db",
   "version": "0.0.0",
   "private": true,
   "packageManager": "pnpm@9.0.0",
@@ -13,8 +13,8 @@
     "prepublishOnly": "pnpm run gen"
   },
   "devDependencies": {
-    "@pixelgenie/eslint-config": "workspace:*",
-    "@pixelgenie/tsconfig": "workspace:*",
+    "@project/eslint-config": "workspace:*",
+    "@project/tsconfig": "workspace:*",
     "@types/node": "^22.10.1",
     "dotenv": "^16.4.7",
     "prisma": "^6.1.0",

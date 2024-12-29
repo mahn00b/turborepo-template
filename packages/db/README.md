@@ -1,1 +1,1 @@
-# `@pixelgenie/db`
+# `@project/db`

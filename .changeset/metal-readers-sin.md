@@ -1,7 +1,7 @@
 ---
-"@pixelgenie/db": patch
-"@pixelgenie/eslint-config": patch
-"@pixelgenie/tsconfig": patch
+"@project/db": patch
+"@project/eslint-config": patch
+"@project/tsconfig": patch
 ---
 
 Further repo initialization w/ prisma

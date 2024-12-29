@@ -1,6 +1,6 @@
 ---
-"@pixelgenie/eslint-config": minor
-"@pixelgenie/typescript-config": minor
+"@project/eslint-config": minor
+"@project/typescript-config": minor
 ---
 
 Project Initialization
