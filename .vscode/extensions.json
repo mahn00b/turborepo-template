@@ -1,0 +1,9 @@
+{
+    "recommendations": [
+        "streetsidesoftware.code-spell-checker",
+        "neotan.vscode-auto-restart-typescript-eslint-servers",
+        "shardulm94.trailing-spaces",
+        "eamodio.gitlens",
+        "prisma.prisma"
+    ]
+}
