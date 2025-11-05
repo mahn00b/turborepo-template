@@ -1,5 +1,5 @@
 {
-  "name": "@workspace/project",
+  "name": "@repo/project",
   "private": true,
   "scripts": {
     "build": "turbo build",
